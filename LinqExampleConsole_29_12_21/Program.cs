@@ -12,7 +12,7 @@ namespace LinqExampleConsole_29_12_21
         static SanalDB db = new SanalDB();
         
         static void Main(string[] args)
-        {  
+        {
             //int sayac = 0;
             //İsminin baş harfi A ile başlayan müşterilerin adedi (LİNQ KULLANIMI)
 
@@ -111,12 +111,44 @@ namespace LinqExampleConsole_29_12_21
             //var predicateKullanimi06 = mList.FindAll(m => m.DogumTarihi.Year > 1990);
 
 
+            // ACTION DELEGATE
+
+            //Action<Musteri> ActionDelegate = new Action<Musteri>(AdSoyad);
+
+            //mList.ForEach(ActionDelegate);
+
+            //mList.ForEach(new Action<Musteri>(AdSoyad));
+
+            //mList.ForEach(delegate (Musteri m)
+            //{
+            //    Console.WriteLine($"{m.Ad} {m.Soyad}");
+            //});
+
+            //mList.ForEach((Musteri m) =>
+            //{
+            //    Console.WriteLine($"{m.Ad} {m.Soyad}");
+            //});
+
+            //mList.ForEach(m =>
+            //{
+            //    Console.WriteLine($"{m.Ad} {m.Soyad}");
+            //});
 
 
 
-            Console.ReadLine();
+
+
+
+            //Console.ReadLine();
 
         }
+        //static void AdSoyad(Musteri m)
+        //{
+        //    Console.WriteLine($"{m.Ad} {m.Soyad}");
+        //}
+
+
+
         //static bool FuncDelegateKullanimi(Musteri m)
         //{           
         //        if (m.Ad.StartsWith("A"))
